@@ -1,0 +1,19 @@
+{
+  "name": "blank",
+  "version": "1.0.0",
+  "description": "A blank starter theme for WordPress.",
+  "main": "index.js",
+  "scripts": {
+    "compile:css": "node-sass scss/* -o ./ --output-style compressed",
+    "browser-sync": "browser-sync start --proxy https://wp.local/ --files \"*.php\" \"*.css\" \"*.js\"",
+    "dev": "concurrently \"npm run compile:css -- -watch\" \"npm run browser-sync\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.29.3",
+    "concurrently": "^8.2.2",
+    "node-sass": "^9.0.0"
+  }
+}
